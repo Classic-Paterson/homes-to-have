@@ -29,8 +29,9 @@ export class AppHome extends LitElement {
         max-width: 60em;
       }
 
-      #welcomeBlock img {
-        width: 60em;
+      .main-image{
+        width:100%;
+        max-width: 60em;
       }
 
       pwa-install {
@@ -130,7 +131,7 @@ export class AppHome extends LitElement {
 
         <div id="welcomeBlock">
 
-          <img src="assets/images/1.jpg" alt="app icon">
+          <img class="main-image" src="assets/images/1.jpg" alt="app icon">
           <h2>${this.address}</h2>
           <div class="price_tag">${this.price}</div>
           <div>
