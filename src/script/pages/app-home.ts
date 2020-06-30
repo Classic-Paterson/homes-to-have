@@ -35,9 +35,7 @@ export class AppHome extends LitElement {
       }
 
       pwa-install {
-        position: absolute;
-        bottom: 16px;
-        right: 16px;
+
       }
 
       button {
@@ -93,7 +91,6 @@ export class AppHome extends LitElement {
         cursor: pointer;
         font-weight: 700;
         font-size: 15px;
-
         font: 700 14px/1.5 Muli,'Open Sans',"Droid Sans",Helvetica,sans-serif;
     }
 
@@ -161,7 +158,7 @@ export class AppHome extends LitElement {
           ${'share' in navigator ? html`<button class="homes-button" @click="${this.share}">Share ${this.address}</button>` : null}
         </div>
 
-        <pwa-install>Save 87 Conway Road</pwa-install>
+        <pwa-install><button class="homes-button">Save ${this.address}</button></pwa-install>
       </div>
     `;
   }
