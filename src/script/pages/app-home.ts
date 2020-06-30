@@ -8,7 +8,8 @@ export class AppHome extends LitElement {
 
   // For more information on using properties in lit-element
   // check out this link https://lit-element.polymer-project.org/guide/properties#declare-with-decorators
-  @property() message: string = "Welcome!";
+  @property() address: string = "87 Conway Road, Paengaroa";
+  @property() price: string = "Offers Over $795,000";
 
   static get styles() {
     return css`
@@ -25,11 +26,11 @@ export class AppHome extends LitElement {
       }
 
       #welcomeBlock p {
-        max-width: 22em;
+        max-width: 60em;
       }
 
       #welcomeBlock img {
-        width: 6em;
+        width: 60em;
       }
 
       pwa-install {
@@ -40,6 +41,43 @@ export class AppHome extends LitElement {
 
       button {
         cursor: pointer;
+      }
+
+      h2{
+        font-size: 28px;
+        color: #313944;
+        font-weight: 900;
+      }
+
+      p{
+        color: #313944;
+        text-align:left;
+        display: block;
+        margin-block-start: 1em;
+        margin-block-end: 1em;
+        margin-inline-start: 0px;
+        margin-inline-end: 0px;
+        font-size: 14px;
+      }
+
+      .price_tag{
+        font-size: 46px;
+        color: #313944;
+        font-weight: 800;
+        margin-bottom:10px;
+      }
+
+      .icon-detail{
+        height: 26px;
+          width: 26px;
+          max-height: 26px;
+          max-width: 26px;
+      }
+
+      .details-value{
+        font-size:20px;
+        position: relative;
+        bottom: 8px;
       }
 
       @media(spanning: single-fold-vertical) {
@@ -76,13 +114,31 @@ export class AppHome extends LitElement {
 
         <div id="welcomeBlock">
 
-          <img src="assets/icons/icon_512.png" alt="app icon">
-          <h2>${this.message}</h2>
+          <img src="assets/images/1.jpg" alt="app icon">
+          <h2>${this.address}</h2>
+          <div class="price_tag">${this.price}</div>
+          <div>
+          <img _ngcontent-homes-app-c67="" class="icon-detail" src="assets/images/Bedrooms.svg"><span class="details-value">3</span>
+          <img _ngcontent-homes-app-c67="" class="icon-detail" src="assets/images/Bathrooms.svg"><span class="details-value">1</span>
+          <img _ngcontent-homes-app-c67="" class="icon-detail" src="assets/images/Car-spaces.svg"><span class="details-value">4</span>
+          <img _ngcontent-homes-app-c67="" class="icon-detail" src="assets/images/Floor-area.svg"><span class="details-value">140m2</span>
+          <img _ngcontent-homes-app-c67="" class="icon-detail" src="assets/images/Land-area.svg"><span class="details-value">884m2</span>
+          </div>
+          
+          
 
           <p>
-            Welcome to the <a href="https://pwabuilder.com">PWABuilder</a> pwa-starter!
-
-            Be sure to head back to <a href="https://pwabuilder.com">PWABuilder</a> when you are ready to ship this PWA to the Microsoft, Google Play and Samsung Galaxy stores!
+          Desirable in design with plenty of space and style, here is a spectacular near-new family home bursting with modern features and built for entertaining.
+          <br/><br/>
+          Spacious and light-filled with stunning vaulted ceilings, the open planned kitchen dining and living lead to sizeable outdoor decking and a private back yard. The separate media room offers handy space for a spot of sport or a family movie, and the office grants a perfect work-from-home option.
+          <br/><br/>
+          The home provides four double bedrooms with a walk-in-robe and ensuite in the master, and stylish main bathroom facilities include a separate shower with dual head-piece and deep-bottom bathtub.
+          <br/><br/>
+          Internal access dual-car garaging is reached through the separate laundry room extra storage space can be found in the above-garage attic via drop-down stairs.
+          <br/><br/>
+          Fully fenced the large freehold site provides an easily-managed space in a semi-rural and private setting at the end of a quiet cul-de-sac location.
+          <br/><br/>
+          To download the full Property Information Pack copy and paste the following link into your web browser and register your details: bit.ly/3dj5VKo
           </p>
 
           ${'share' in navigator ? html`<button @click="${this.share}">Share this Starter!</button>` : null}
