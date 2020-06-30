@@ -35,7 +35,7 @@ export class AppHome extends LitElement {
       }
 
       pwa-install {
-
+        --install-button-color: none;
       }
 
       button {
@@ -156,9 +156,11 @@ export class AppHome extends LitElement {
           </p>
 
           ${'share' in navigator ? html`<button class="homes-button" @click="${this.share}">Share ${this.address}</button>` : null}
-        </div>
 
-        <pwa-install><button class="homes-button">Save ${this.address}</button></pwa-install>
+          <pwa-install>
+            <button class="homes-button">Save ${this.address}</button>
+          </pwa-install>
+        </div>
       </div>
     `;
   }
