@@ -155,8 +155,6 @@ export class AppHome extends LitElement {
           To download the full Property Information Pack copy and paste the following link into your web browser and register your details: bit.ly/3dj5VKo
           </p>
 
-          ${'share' in navigator ? html`<button class="homes-button" @click="${this.share}">Share ${this.address}</button>` : null}
-
           <pwa-install>
             <button class="homes-button">Save ${this.address}</button>
           </pwa-install>
