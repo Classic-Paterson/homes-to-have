@@ -1,10 +1,10 @@
 {
-  "name": "PWA Starter",
+  "name": "87 Conway Road, Paengaroa",
   "display": "standalone",
   "start_url": "/",
-  "short_name": "starter",
+  "short_name": "87 Conway Road",
   "theme_color": "#686bd2",
-  "description": "This is a PWA Starter app",
+  "description": "This is 87 Conway Road, Paengaroa",
   "orientation": "any",
   "background_color": "#686bd2",
   "related_applications": [],
@@ -15,16 +15,32 @@
       "sizes": "512x512"
     },
     {
+      "src": "assets/icons/icon_384.png",
+      "sizes": "384x384"
+    },
+    {
       "src": "assets/icons/icon_192.png",
       "sizes": "192x192"
     },
     {
-      "src": "assets/icons/icon_48.png",
-      "sizes": "48x48"
+      "src": "assets/icons/icon_152.png",
+      "sizes": "152x152"
     },
     {
-      "src": "assets/icons/icon_24.png",
-      "sizes": "24x24"
+      "src": "assets/icons/icon_144.png",
+      "sizes": "144x144"
+    },
+    {
+      "src": "assets/icons/icon_128.png",
+      "sizes": "128x128"
+    },
+    {
+      "src": "assets/icons/icon_96.png",
+      "sizes": "96x96"
+    },
+    {
+      "src": "assets/icons/icon_72.png",
+      "sizes": "72x72"
     }
   ],
   "screenshots": [

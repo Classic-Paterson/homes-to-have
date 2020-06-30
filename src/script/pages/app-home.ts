@@ -80,6 +80,24 @@ export class AppHome extends LitElement {
         bottom: 8px;
       }
 
+      .homes-button {
+        display: block;
+        border: none;
+        box-sizing: border-box;
+        background-color: #3f97a6;
+        color: #fff;
+        padding: 10px 15px;
+        border-radius: 2px;
+        transition: background-color .2s,color .2s;
+        cursor: pointer;
+        font-weight: 700;
+        font-size: 15px;
+        position: absolute;
+        top: 10px;
+        right: 11px;
+        font: 700 14px/1.5 Muli,'Open Sans',"Droid Sans",Helvetica,sans-serif;
+    }
+
       @media(spanning: single-fold-vertical) {
         #welcomeBlock {
           width: 50%;
@@ -141,10 +159,10 @@ export class AppHome extends LitElement {
           To download the full Property Information Pack copy and paste the following link into your web browser and register your details: bit.ly/3dj5VKo
           </p>
 
-          ${'share' in navigator ? html`<button @click="${this.share}">Share this Starter!</button>` : null}
+          ${'share' in navigator ? html`<button class="homes-button" @click="${this.share}">Share ${this.address}</button>` : null}
         </div>
 
-        <pwa-install>Install PWA Starter</pwa-install>
+        <pwa-install>Save 87 Conway Road</pwa-install>
       </div>
     `;
   }
