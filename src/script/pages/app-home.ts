@@ -92,9 +92,7 @@ export class AppHome extends LitElement {
         cursor: pointer;
         font-weight: 700;
         font-size: 15px;
-        position: absolute;
-        top: 10px;
-        right: 11px;
+
         font: 700 14px/1.5 Muli,'Open Sans',"Droid Sans",Helvetica,sans-serif;
     }
 
