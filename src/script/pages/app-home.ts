@@ -35,7 +35,7 @@ export class AppHome extends LitElement {
       }
 
       pwa-install {
-        --install-button-color: none;
+        --install-button-color: #3f97a6;
       }
 
       button {
