@@ -120,11 +120,8 @@ export class AppHeader extends LitElement {
         </g>
       </g>
       </svg>
-        
-      <div class="homes-button">Log in / Register</div>
       </header>
-
-
     `;
   }
+
 }

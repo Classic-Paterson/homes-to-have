@@ -3,12 +3,10 @@
 
 <head>
   <meta charset="utf-8">
-  
+
   <title>87 Conway Road, Paengaroa</title>
 
   <base href="/">
-
-  <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 
   <!-- This meta viewport ensures the webpage's dimensions change according to the device it's on. This is called Responsive Web Design.-->
   <meta name="viewport"
@@ -32,15 +30,51 @@
 
   <!--<script type="module" src="/build/src/script/pages/app-index.js"></script>-->
   <script type="module" src="build/pages/app-index.js"></script>
+
+  <script>
+
+    function testNotification() {
+      if (Notification.permission === "granted") {
+        generateNotification();
+      }
+
+      else if (Notification.permission !== "denied") {
+        Notification.requestPermission().then(function (permission) {
+          if (permission === "granted") {
+            generateNotification();
+          }
+        });
+      }
+    }
+
+    function getRandomInt(max) {
+      return Math.floor(Math.random() * Math.floor(max));
+    }
+
+    function generateNotification() {
+
+    var notificationList = [
+    "The price for 87 Conway Road has been reduced!",
+    "The LIM for 87 Conway Road has been added!",
+    "If you lived at 87 Conway Road you'd be home by now!",
+    "The auction for 87 Conway Road is next week.",
+    ]
+
+      var notification = new Notification(notificationList[getRandomInt(4)]);
+    }
+
+  </script>
 </head>
 
 <body>
   <!-- Our app-index web component. This component is defined in src/pages/app-index.ts-->
   <app-index></app-index>
 
-   <!-- For more info on the pwa-update component click here https://github.com/pwa-builder/pwa-update -->
-   <script type="module" src="https://cdn.jsdelivr.net/npm/@pwabuilder/pwaupdate"></script>
-   <pwa-update offlineToastDuration="0" swpath="pwabuilder-sw.js"></pwa-update>
+  <!-- For more info on the pwa-update component click here https://github.com/pwa-builder/pwa-update -->
+  <script type="module" src="https://cdn.jsdelivr.net/npm/@pwabuilder/pwaupdate"></script>
+  <pwa-update offlineToastDuration="0" swpath="pwabuilder-sw.js"></pwa-update>
+
+  <button class="notifications-button" onclick="testNotification()">Test Notification</button>
 </body>
 
 </html>
