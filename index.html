@@ -33,6 +33,8 @@
 
   <script>
 
+    navigator.serviceWorker.register('sw.js');
+
     function testNotification() {
       if (Notification.permission === "granted") {
         generateNotification();
@@ -60,7 +62,15 @@
     "The auction for 87 Conway Road is next week.",
     ]
 
-      var notification = new Notification(notificationList[getRandomInt(4)]);
+    navigator.serviceWorker.ready.then(function(registration) {
+        registration.showNotification('87 Conway Road, Paengaroa', {
+          body: notificationList[getRandomInt(4)],
+          icon: 'assets/images/1.jpg',
+          vibrate: [200, 100, 200, 100, 200, 100, 200],
+          tag: notificationList[getRandomInt(4)]
+        });
+      });
+      //var notification = new Notification(notificationList[getRandomInt(4)]);
     }
 
   </script>
